@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "server:prod": "node -r esm server.js",
-    "server:dev": "nodemon -r esm server.js"
+    "server:dev": "nodemon -r esm server.js",
+    "client:start": "npm start --prefix client",
+    "client:test": "npm test --prefix client",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:start\""
   },
   "author": "Mohamed Amine Boudagga",
   "license": "MIT",
@@ -18,7 +21,8 @@
     "gravatar": "^1.8.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.14",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "stripe": "^8.156.0"
   },
   "devDependencies": {
     "concurrently": "^6.2.0",
