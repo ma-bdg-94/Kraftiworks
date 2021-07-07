@@ -1,0 +1,99 @@
+@media only screen and (max-width: 767px) {
+  .navbar {
+    background: gold !important;
+  }
+
+
+  .collapse {
+    height: 100vh;
+    align-items: center;
+  }
+
+  .nav {
+    height: 60%;
+  }
+
+
+  .button {
+    color: whitesmoke !important;
+    border: none !important;
+    font-weight: bold;
+    width: 100% !important;
+  }
+}
+
+.navbar {
+  padding: 2% 4% !important;
+  background: none;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-family: 'Akaya Kanadaka', sans-serif;
+  font-size: 1.6rem !important;
+  color: black !important;
+}
+
+.nav {
+  width: 50% !important;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-inline: 25%;
+  text-align: left !important;
+}
+
+.nav-item {
+  text-align: left !important;
+  cursor: pointer;
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  
+  
+}
+
+.nav-item:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: dodgerblue;
+}
+
+.nav-item-link {
+  text-decoration: none !important;
+  color: navy !important;
+}
+
+.button-container {
+  justify-content: center !important;
+  align-items: center !important;
+  width: 20% !important;
+}
+
+.button {
+  border-radius: 20px !important;
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  width: 100% !important;
+  background: navy !important;
+  border: none !important;
+  transition: background 0.2s ease-in-out !important;
+}
+
+.button:hover {
+  background-color: dodgerblue !important;
+}
+
+.button:focus, .button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.toggler {
+  border: none !important;
+}
+
+.toggler:focus, .toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
