@@ -3,7 +3,7 @@ import React from 'react'
 const Talents = () => {
   return (
     <div>
-      Talents
+      Section Under Construction
     </div>
   )
 }

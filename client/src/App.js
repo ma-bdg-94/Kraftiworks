@@ -7,8 +7,8 @@ import Navigation from './components/navbar/Navigation'
 import Landing from './components/landing/Landing'
 import Service from './components/service/Service'
 import Talents from './components/talents/Talents'
-import JoinUs from './components/joinus/JoinUs'
-import Login from './components/login/Login'
+import JoinUs from './components/auth/JoinUs'
+import Login from './components/auth/Login'
 
 const App = () => {
   return (

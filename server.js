@@ -11,6 +11,9 @@ const app = express()
 // connect to db
 dbConnect()
 
+// initiate middleware
+app.use(express.json({ extended: false }))
+
 // define routes
 app.use('/users', usersRoute)
 app.use('/auth', authRoute)
