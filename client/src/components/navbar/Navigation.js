@@ -7,15 +7,20 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   Button,
+  Modal,
+  ModalBody,
 } from 'reactstrap'
 import './navigation.css'
+import '../service/service.css'
+import Explore from './Explore'
 
 const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [modal, setModal] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
+  const toggleModal = () => setModal(!modal)
 
   return (
     <div>
@@ -26,9 +31,26 @@ const Navigation = (props) => {
         <NavbarToggler onClick={toggle} className="toggler" />
         <Collapse isOpen={isOpen} navbar className="collapse">
           <Nav className="mr-auto nav" pill="true">
+            <NavItem className="nav-item" onClick={toggleModal}>
+                Explore
+            </NavItem>
+            <Modal isOpen={modal} toggle={toggleModal} size="xl">
+              {/* <ModalHeader toggle={toggleModal}>Modal title</ModalHeader> */}
+              <ModalBody>
+                <Explore />
+              </ModalBody>
+              {/* <ModalFooter>
+                <Button color="primary" onClick={toggleModal}>
+                  Do Something
+                </Button>{' '}
+                <Button color="secondary" onClick={toggleModal}>
+                  Cancel
+                </Button>
+              </ModalFooter> */}
+            </Modal>
             <NavItem className="nav-item">
               <Link to="/service" className="nav-item-link">
-                Service
+                Services
               </Link>
             </NavItem>
             <NavItem className="nav-item">
@@ -39,6 +61,11 @@ const Navigation = (props) => {
             <NavItem className="nav-item">
               <Link to="/join" className="nav-item-link">
                 Join Us
+              </Link>
+            </NavItem>
+            <NavItem className="nav-item">
+              <Link to="/join" className="nav-item-link">
+                Contact
               </Link>
             </NavItem>
           </Nav>

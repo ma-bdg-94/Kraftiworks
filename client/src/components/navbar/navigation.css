@@ -1,24 +1,27 @@
 @media only screen and (max-width: 767px) {
   .navbar {
-    background: gold !important;
+    background: #1e90ff !important;
   }
 
 
   .collapse {
     height: 100vh;
     align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .nav {
     height: 60%;
+    display: flex;
+    flex-direction: column;
   }
 
 
   .button {
-    color: whitesmoke !important;
+    color: #f5f5f5 !important;
     border: none !important;
     font-weight: bold;
-    width: 100% !important;
   }
 }
 
@@ -31,14 +34,14 @@
 .navbar-brand {
   font-family: 'Akaya Kanadaka', sans-serif;
   font-size: 1.6rem !important;
-  color: black !important;
+  color: #000000 !important;
 }
 
 .nav {
-  width: 50% !important;
+  width: 70% !important;
   align-items: center;
   justify-content: space-evenly;
-  margin-inline: 25%;
+  margin-inline: 10%;
   text-align: left !important;
 }
 
@@ -55,12 +58,12 @@
 .nav-item:hover {
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: dodgerblue;
+  border-bottom-color: #1e90ff;
 }
 
 .nav-item-link {
   text-decoration: none !important;
-  color: navy !important;
+  color: #000080 !important;
 }
 
 .button-container {
@@ -75,13 +78,13 @@
   font-weight: 500;
   font-size: 1.5rem;
   width: 100% !important;
-  background: navy !important;
+  background: #000080 !important;
   border: none !important;
   transition: background 0.2s ease-in-out !important;
 }
 
 .button:hover {
-  background-color: dodgerblue !important;
+  background-color: #1e90ff !important;
 }
 
 .button:focus, .button:active {
@@ -96,4 +99,23 @@
 .toggler:focus, .toggler:active {
   outline: none !important;
   box-shadow: none !important;
+}
+
+/* Styles of Explore component */
+.row-3 {
+  justify-content: space-evenly;
+  margin-block: 2%;
+  margin-inline: 0 !important;
+}
+
+.card {
+  border: none !important;
+  outline: none !important;
+  font-family: 'Comfortaa', sans-serif;
+  background: none !important;
+}
+
+.card-icon {
+  font-size: 3.5rem !important;
+  color: #1e90ff;
 }
