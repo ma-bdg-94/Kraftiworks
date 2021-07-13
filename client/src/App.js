@@ -10,22 +10,28 @@ import Talents from './components/talents/Talents'
 import JoinUs from './components/auth/JoinUs'
 import Login from './components/auth/Login'
 
+// redux
+import { Provider } from 'react-redux'
+import Store from './Store'
+
 const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <Navigation />
-        <Route exact path="/" component={Landing} />
-        <section>
-          <Switch>
-            <Route exact path="/service" component={Service} />
-            <Route exact path="/talents" component={Talents} />
-            <Route exact path="/join" component={JoinUs} />
-            <Route exact path="/login" component={Login} />
-          </Switch>
-        </section>
-      </div>
-    </Router>
+    <Provider store={Store}>
+      <Router>
+        <div className="App">
+          <Navigation />
+          <Route exact path="/" component={Landing} />
+          <section>
+            <Switch>
+              <Route exact path="/service" component={Service} />
+              <Route exact path="/talents" component={Talents} />
+              <Route exact path="/join" component={JoinUs} />
+              <Route exact path="/login" component={Login} />
+            </Switch>
+          </section>
+        </div>
+      </Router>
+    </Provider>
   )
 }
 

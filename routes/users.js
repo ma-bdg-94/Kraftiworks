@@ -22,7 +22,12 @@ router.post(
       .withMessage('Required Field!')
       .isEmail()
       .withMessage('Wrong Email Format!'),
-    check('isTech', 'Required Field').isBoolean(),
+    check('account')
+      .not()
+      .isEmpty()
+      .withMessage('Required Field!')
+      .isIn(['technician', 'business'])
+      .withMessage('Account Type Can Be Either Technician Or Business'),
     check('password')
       .not()
       .isEmpty()

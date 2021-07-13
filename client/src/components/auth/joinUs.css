@@ -24,7 +24,7 @@
   display: 'flex' !important;
   align-content: center !important;
   font-size: 1.1rem;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Comfortaa', sans-serif !important;
 }
 
 .submit, .submit-text {
@@ -73,8 +73,8 @@
 
 .label {
   text-align: left;
-  font-family: 'Comfortaa', sans-serif;
-  margin-left: 4%;
+  font-family: 'Comfortaa', sans-serif !important;
+  margin-left: 4% !important;
 }
 
 .switch-link {

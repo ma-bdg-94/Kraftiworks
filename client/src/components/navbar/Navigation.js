@@ -32,7 +32,7 @@ const Navigation = (props) => {
         <Collapse isOpen={isOpen} navbar className="collapse">
           <Nav className="mr-auto nav" pill="true">
             <NavItem className="nav-item" onClick={toggleModal}>
-                Explore
+              Explore
             </NavItem>
             <Modal isOpen={modal} toggle={toggleModal} size="xl">
               {/* <ModalHeader toggle={toggleModal}>Modal title</ModalHeader> */}
