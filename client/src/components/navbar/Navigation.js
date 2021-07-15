@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+
+// UI components & style
 import {
   Collapse,
   Navbar,
@@ -12,7 +14,8 @@ import {
   ModalBody,
 } from 'reactstrap'
 import './navigation.css'
-import '../service/service.css'
+
+// components
 import Explore from './Explore'
 
 const Navigation = (props) => {
@@ -35,18 +38,9 @@ const Navigation = (props) => {
               Explore
             </NavItem>
             <Modal isOpen={modal} toggle={toggleModal} size="xl">
-              {/* <ModalHeader toggle={toggleModal}>Modal title</ModalHeader> */}
               <ModalBody>
                 <Explore />
               </ModalBody>
-              {/* <ModalFooter>
-                <Button color="primary" onClick={toggleModal}>
-                  Do Something
-                </Button>{' '}
-                <Button color="secondary" onClick={toggleModal}>
-                  Cancel
-                </Button>
-              </ModalFooter> */}
             </Modal>
             <NavItem className="nav-item">
               <Link to="/service" className="nav-item-link">

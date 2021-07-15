@@ -1,4 +1,4 @@
-import React from 'react'
+// UI components
 import { Card, Row, Col, CardTitle, Container } from 'reactstrap'
 import AccountBoxOutlinedIcon from '@material-ui/icons/AccountBoxOutlined'
 import LocalAtmOutlinedIcon from '@material-ui/icons/LocalAtmOutlined'

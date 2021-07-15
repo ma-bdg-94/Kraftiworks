@@ -1,8 +1,10 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
+// UI components & style
 import { Container, Row, Col, Button } from 'reactstrap'
 import './landing.css'
+
+// components
 import Section1 from './Section1'
 
 const Landing = (props) => {

@@ -1,4 +1,4 @@
-import React from 'react'
+// UI components & style
 import { Card, Row, Col, CardText, CardTitle } from 'reactstrap'
 import InsertChartOutlinedOutlinedIcon from '@material-ui/icons/InsertChartOutlinedOutlined'
 import VerifiedUserOutlinedIcon from '@material-ui/icons/VerifiedUserOutlined'

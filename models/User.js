@@ -7,11 +7,11 @@ const UserSchema = new Schema(
       required: true,
       unique: true,
     },
-    account: {
+    password: {
       type: String,
       required: true,
     },
-    password: {
+    account: {
       type: String,
       required: true,
     },

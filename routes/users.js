@@ -45,7 +45,7 @@ router.post(
         .json({ errors: errors.array({ onlyFirstError: true }) })
     }
 
-    const { email, isTech, password } = req.body
+    const { email, password, account } = req.body
 
     try {
       let user = await User.findOne({ email })
@@ -64,8 +64,8 @@ router.post(
 
       user = new User({
         email,
-        isTech,
         password,
+        account,
         avatar,
       })
 

@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import PropTypes from 'prop-types'
+import { Link, Redirect } from 'react-router-dom'
+import { connect } from 'react-redux'
 
+// UI components & style
 import { Container, Row, Col, Button } from 'reactstrap'
 import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined'
 import VisibilityOffOutlinedIcon from '@material-ui/icons/VisibilityOffOutlined'
-
 import './joinUs.css'
 
-const Login = () => {
+// actions
+import { signIn } from '../../actions/authActions'
+
+const Login = ({ authenticated, signIn }) => {
   const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
     email: '',
@@ -29,7 +34,12 @@ const Login = () => {
 
   const handleSubmit = (ev) => {
     ev.preventDefault()
-    console.log(formData)
+    signIn({ email, password })
+  }
+
+  // redirect when authenticated
+  if (authenticated) {
+    return <Redirect to="/" />
   }
 
   return (
@@ -85,4 +95,13 @@ const Login = () => {
   )
 }
 
-export default Login
+Login.propTypes = {
+  signIn: PropTypes.func.isRequired,
+  authenticated: PropTypes.bool,
+}
+
+const mapStateToProps = (state) => ({
+  authenticated: state.authReducer.authenticated,
+})
+
+export default connect(mapStateToProps, { signIn })(Login)
