@@ -8,6 +8,7 @@ import {
   SIGNIN_SUCC,
   SIGNUP_FAIL,
   SIGNUP_SUCC,
+  SIGN_OUT
 } from './types'
 
 // get authenticated user
@@ -96,4 +97,11 @@ export const signIn = ({ email, password }) => async (dispatch) => {
       type: SIGNIN_FAIL,
     })
   }
+}
+
+// log out user
+export const signOut = () => (dispatch) => {
+  dispatch({
+    type: SIGN_OUT,
+  })
 }

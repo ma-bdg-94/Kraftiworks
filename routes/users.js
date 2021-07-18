@@ -91,7 +91,7 @@ router.post(
       )
     } catch (er) {
       console.error(er.message)
-      res.status(500).send('SERVER ERROR 500')
+      res.status(500).send('Error 500! Something Went Wrong On The Server')
     }
   },
 )

@@ -19,7 +19,7 @@ router.get('/', authenticated, async (req, res) => {
     res.json(user)
   } catch (er) {
     console.error(er.message)
-    res.status(500).send('SERVER ERROR 500')
+    res.status(500).send('Error 500! Something Went Wrong On The Server')
   }
 })
 
@@ -78,7 +78,7 @@ router.post(
       )
     } catch (er) {
       console.error(er.message)
-      res.status(500).send('SERVER ERROR 500')
+      res.status(500).send('Error 500! Something Went Wrong On The Server')
     }
   },
 )

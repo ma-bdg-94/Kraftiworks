@@ -7,6 +7,7 @@ import {
   SIGNIN_SUCC,
   SIGNUP_FAIL,
   SIGNUP_SUCC,
+  SIGN_OUT,
 } from '../actions/types'
 
 const initState = {
@@ -38,6 +39,7 @@ export default function (state = initState, action) {
       }
     case SIGNUP_FAIL:
     case SIGNIN_FAIL:
+    case SIGN_OUT:
     case AUTH_FAIL:
       localStorage.removeItem('token')
       return {

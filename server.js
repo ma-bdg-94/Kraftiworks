@@ -4,6 +4,7 @@ import dbConnect from './config/db'
 // import routes
 import usersRoute from './routes/users'
 import authRoute from './routes/auth'
+import technicianRoute from './routes/technician'
 
 // initialize app
 const app = express()
@@ -17,6 +18,7 @@ app.use(express.json({ extended: false }))
 // define routes
 app.use('/users', usersRoute)
 app.use('/auth', authRoute)
+app.use('/technician', technicianRoute)
 
 // test api
 app.get('/', (req, res) => {
